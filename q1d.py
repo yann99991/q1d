@@ -110,22 +110,7 @@ class Q1d:
 
 
 
-if __name__ == "__main__":
-    N = 100
-    Tt = np.linspace(100, 100, N)
-    A = np.concatenate((np.linspace(2, 1, N//2), np.linspace(1, 2, N//2)))
-    q1d = Q1d(N, Tt, A)
-    M1 = 0.4
-    while True:
-        try:
-            Ms = q1d.compute_solution(M1=M1)
-            break
-        except ValueError as e:
-            M1-=0.0001
-            print(M1)
-            continue
-    print(Ms)
-    print("Done")
+
 
 
 
